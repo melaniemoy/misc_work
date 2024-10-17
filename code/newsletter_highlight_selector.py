@@ -23,7 +23,7 @@ D360_TEAM_MEMBERS = [
     "Vishal Shah",
     "Discovery - TBH"
      ]
-ALREADY_HIGHLIGHTED = []
+ALREADY_HIGHLIGHTED = ["Kelly Zhou"]
 
 # Function to get a random value from A that's not in B
 def select_newsletter_highlight():
