@@ -4,6 +4,7 @@ D360_TEAM_MEMBERS = [
     "Juan Garcia Bazan",
     "Aaron Niskode-Dossett",
     "Melanie Moy",
+    "Swetha Baskaran",
     "Damani Philip",
     "Edgar Arenas",
     "Eileen Toomer",
