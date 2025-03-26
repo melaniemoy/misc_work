@@ -10,6 +10,12 @@ with churn_base as (
   FROM `etsy-data-warehouse-dev.rollups.buyer_top_metadata`
 )
 
+-- How many people churned?
+SELECT
+  COUNTIF(churned)/COUNT(*) as pct_churned,
+  COUNTIF(not churned)/COUNT(*) as pct_not_churned
+FROM churn_base
+
 -- For buyers who didn't churn, what was the avg difference in spend, change in rank?
 SELECT
   AVG(gms_diff) as avg_gms_diff,
