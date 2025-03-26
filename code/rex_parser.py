@@ -47,6 +47,6 @@ for file in find_yaml_files("/Users/mmoy/code/airflow-rollups/dags/yaml_dags/"):
     name, email_recipients = parse_yaml(file)
 
     # check if email contains cdata, estein, etoomer, kzhou
-    if check_email_contains(email_recipients, ['cdata', 'estein', 'etoomer', 'kzhou']):
+    if check_email_contains(email_recipients, ['cdata', 'visits-support', 'wins', 'data-eng', 'wins-alert', 'cdata-alerts']):
         print(f"Name: {name}")
         print(f"Email Recipients: {email_recipients}")
