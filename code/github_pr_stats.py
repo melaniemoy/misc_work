@@ -26,6 +26,14 @@ START_DATE: YYYY-MM-DD
 REPO_LIST: comma-separated list of all the repos you want to collect stats from.  Ex: repo1,repo2,etc
 """
 
+###
+# data-discovery-and-reporting-tools
+# 2024-01-01
+# datahub,datahub-scanner-action,data-quality-ge,terraform-config,airflow
+
+# data-foundations
+# 2024-01-01
+# data-privacy,gcs-inventory,terraform-configs,data-warehouse-admin-tools,airflow,service-platform,composter
 
 TEAM_LOGINS = []
 
@@ -53,7 +61,8 @@ def get_prs_for_team(github, repo, slug_name, pr_start_date):
     # author:dossett author: bgreenlee author: bmcgonigle etc.
     author_query = ' '.join(['author:'+s for s in get_team_member_logins(github, slug_name)])
     print(f"Getting PRs for {repo} from GitHub")
-    return github.search_issues(query=f"is:pr is:merged created:>{pr_start_date} repo:etsy/{repo} " + author_query, sort='created', order='asc')
+    query_string = f"is:pr is:merged created:>{pr_start_date} repo:etsy/{repo} " + author_query
+    return github.search_issues(query=query_string, sort='created', order='asc')
 
 
 def get_pr_data(repo, prs):
