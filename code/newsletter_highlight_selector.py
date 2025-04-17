@@ -24,8 +24,7 @@ D360_TEAM_MEMBERS = [
     "Monica Senapati",
     "Rachel Hong",
     "Ryan Bertsche",
-    "Vishal Shah",
-    "Discovery - TBH"
+    "Vishal Shah"
      ]
 ALREADY_HIGHLIGHTED = ["Kelly Zhou", "Monica Senapati", "Rachel Hong", "Juan Bages", "Jorge Banuelos", "Kevin Zeng", "Jeena Lee", "Brian McGonigle", "Swetha Baskaran", "Insha Lakhani", "Sydney Hamilton", "Ryan Bertsche"]
 
