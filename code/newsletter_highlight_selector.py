@@ -25,7 +25,7 @@ D360_TEAM_MEMBERS = [
     "Rachel Hong",
     "Ryan Bertsche",
     "Vishal Shah"
-     ]
+]
 ALREADY_HIGHLIGHTED = ["Kelly Zhou", "Monica Senapati", "Rachel Hong", "Juan Bages", "Jorge Banuelos", "Kevin Zeng", "Jeena Lee", "Brian McGonigle", "Swetha Baskaran", "Insha Lakhani", "Sydney Hamilton", "Ryan Bertsche"]
 
 # Function to get a random value from A that's not in B
@@ -37,11 +37,12 @@ def select_newsletter_highlight():
     if not eligible:
         raise Exception("No more eligible team members to highlight.  Reset the list!")
 
-    # Randomly select and return an element from eligible
-    return random.choice(eligible)
+    # Shuffle eligible people
+    random.shuffle(eligible)
+    return eligible
 
 
 # Example usage
-selected_value = select_newsletter_highlight()
+members_randomized = select_newsletter_highlight()
 
-print(f'This week\'s highlighted team member: {selected_value}')
+print(f'Highlighted members in order: {members_randomized}')

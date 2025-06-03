@@ -1,0 +1,30 @@
+COLUMN_NAMES = [
+"event_name",
+"timestamp",
+"browser_id",
+"primary_event",
+"guid",
+"page_guid",
+"event_logger",
+"event_source",
+"ip",
+"user_agent",
+"loc",
+"ref",
+"cookies",
+"ab",
+"user_id",
+"isMobileRequest",
+"isMobileDevice",
+"isMobileTemplate",
+"detected_currency_code",
+"detected_language",
+"detected_region",
+"listing_ids",
+"event_timestamp",
+"properties",
+"_PARTITIONTIME",
+]
+
+for column_name in COLUMN_NAMES:
+    print(f"COUNTIF({column_name} IS NOT NULL)/COUNT(*) as {column_name},")
